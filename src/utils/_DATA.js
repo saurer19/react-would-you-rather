@@ -1,6 +1,7 @@
 let users = {
   sarahedo: {
     id: 'sarahedo',
+    password:'1234',
     name: 'Sarah Edo',
     avatarURL: 'https://image.flaticon.com/icons/svg/17/17004.svg',
     answers: {
@@ -13,6 +14,7 @@ let users = {
   },
   tylermcginnis: {
     id: 'tylermcginnis',
+    password:'1234',
     name: 'Tyler McGinnis',
     avatarURL:'https://image.flaticon.com/icons/svg/17/17004.svg',
     answers: {
@@ -23,6 +25,7 @@ let users = {
   },
   johndoe: {
     id: 'johndoe',
+    password:'1234',
     name: 'John Doe',
     avatarURL:'https://image.flaticon.com/icons/svg/17/17004.svg' ,
     answers: {

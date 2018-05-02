@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Poll from "./Poll";
-import {Card, Header} from 'semantic-ui-react'
+import {Card, Header, Segment} from 'semantic-ui-react'
 class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Header as='h2' content='New Questions'  />
+        <Header as='h2' content='New Questions' attached='top'  />
+
+        <Segment attached>
 
         <Card.Group>
           {this.props.unansweredIds.map(id => (
@@ -14,8 +16,10 @@ class Dashboard extends Component {
           ))}
 
         </Card.Group>
+      </Segment>
+      <Header as='h2' content='Done' attached='top'  />
 
-        <Header as='h2' content='Done'  />
+        <Segment attached>
 
         <Card.Group>
           {this.props.answeredIds.map(id => (
@@ -23,6 +27,7 @@ class Dashboard extends Component {
           ))}
 
         </Card.Group>
+        </Segment>
       </div>
     );
   }
