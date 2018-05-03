@@ -1,47 +1,46 @@
-
-import React, {Component} from 'react'
-import { NavLink } from 'react-router-dom'
-import { Menu } from 'semantic-ui-react'
+import React, { Component } from "react";
+import { NavLink, withRouter } from "react-router-dom";
+import { Menu } from "semantic-ui-react";
 import { connect } from "react-redux";
-import {setLogOut} from "../actions/authedUser"
+import { setLogOut } from "../actions/authedUser";
 class Nav extends Component {
-  logout = e =>{
+  logout = e => {
     e.preventDefault();
     const { dispatch } = this.props;
     dispatch(setLogOut())
-  }
-  render(){
+    this.props.history.push('/')
+
+  };
+  render() {
+
     return (
-
       <div>
-          <Menu pointing secondary>
-            <Menu.Item name="home" header as={NavLink} exact to="/" />
-            <Menu.Item name="leaderboard" header as={NavLink} to="/leaderboard" />
-            <Menu.Item name="New" header as={NavLink} to="/create" />
-            <Menu.Menu position='right'>
-              <Menu.Item>
-
-
-                <img src= {this.props.currentUser.avatarURL} />
-                <h4>
-                  {this.props.currentUser.id}
-                </h4>
-              </Menu.Item>
-            <Menu.Item name='logout' onClick={(e)=>{this.logout(e)}}  />
+        <Menu pointing secondary>
+          <Menu.Item name="home" header as={NavLink}  to="/dashboard" />
+          <Menu.Item name="leaderboard" header as={NavLink} to="/leaderboard" />
+          <Menu.Item name="New" header as={NavLink} to="/create" />
+          <Menu.Menu position="right">
+            <Menu.Item>
+              <img src={this.props.currentUser.avatarURL} />
+              <h4>{this.props.currentUser.id}</h4>
+            </Menu.Item>
+            <Menu.Item
+              name="logout"
+              onClick={e => {
+                this.logout(e);
+              }}
+            />
           </Menu.Menu>
-
-          </Menu>
-
-        </div>
-    )
+        </Menu>
+      </div>
+    );
   }
-
 }
-function mapStateToProps({authedUser,users}){
+function mapStateToProps({ authedUser, users }) {
   const currentUser = users[authedUser];
 
-  return{
+  return {
     currentUser
-  }
+  };
 }
-export default connect(mapStateToProps)(Nav)
+export default withRouter(connect(mapStateToProps)(Nav));

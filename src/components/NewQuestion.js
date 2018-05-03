@@ -25,7 +25,6 @@ class NewQuestion extends Component {
     e.preventDefault();
     const { optionOne, optionTwo } = this.state;
     const { dispatch,authedUser } = this.props;
-    console.log("submit",this.props)
     dispatch(
       handleNewQuestion({
         optionOne,
