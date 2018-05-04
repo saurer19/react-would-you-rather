@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Header, Table } from "semantic-ui-react";
+import {  Table } from "semantic-ui-react";
 import LeaderRow from "./LeaderRow";
 class Leaderboard extends Component {
   render() {

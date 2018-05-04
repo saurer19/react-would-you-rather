@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Button, Form, Header } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { handleSaveQuestion } from "../actions/questions";
 import { handleNewQuestion } from "../actions/shared";
 
 class NewQuestion extends Component {

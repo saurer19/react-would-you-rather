@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { formatDate } from "../utils/helpers";
-import { Table,Header } from 'semantic-ui-react'
+import { Table,Header,Image } from 'semantic-ui-react'
 
 class LeaderRow extends Component {
 
   render() {
     const{user} = this.props
-    console.log("usuario", user)
     if (user === null) {
       return <p>This user doesn't exist</p>;
     }
@@ -15,6 +13,8 @@ class LeaderRow extends Component {
       <Table.Row>
       <Table.Cell>
         <Header as='h3' image>
+          <Image src={user.avatarURL}  size='mini' />
+
           <Header.Content>
               {user.name}
             <Header.Subheader>{user.id}</Header.Subheader>

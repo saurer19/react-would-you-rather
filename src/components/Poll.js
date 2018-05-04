@@ -5,7 +5,7 @@ import { Button, Card } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 class Poll extends Component {
   render() {
-    const { author, timestamp, optionOne, optionTwo, id } = this.props.question;
+    const { author, timestamp, id } = this.props.question;
     if (this.props.question === null) {
       return <p>This question doesn't exist</p>;
     }

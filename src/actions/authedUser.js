@@ -1,16 +1,13 @@
-import { showLoading, hideLoading } from 'react-redux-loading'
-
-export const SET_AUTHED_USER = 'SET_AUTHED_USER'
-export const LOG_OUT = "LOG_OUT"
-export function setAuthedUser (id) {
+export const SET_AUTHED_USER = "SET_AUTHED_USER";
+export const LOG_OUT = "LOG_OUT";
+export function setAuthedUser(id) {
   return {
     type: SET_AUTHED_USER,
-    id,
-  }
+    id
+  };
 }
-export function setLogOut () {
-  console.log("logout!")
+export function setLogOut() {
   return {
-    type: LOG_OUT,
-  }
+    type: LOG_OUT
+  };
 }

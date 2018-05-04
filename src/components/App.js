@@ -9,12 +9,11 @@ import Nav from "./Nav";
 import Login from "./Login";
 import QuestionDetail from "./QuestionDetail";
 import LoadingBar from "react-redux-loading";
-import { Container, Button } from "semantic-ui-react";
+import {  Button } from "semantic-ui-react";
 import "./App.css";
 class App extends Component {
   componentDidMount = () => {
     this.props.dispatch(handleLoginData());
-    console.log("props:", this.props);
   };
 
   render() {

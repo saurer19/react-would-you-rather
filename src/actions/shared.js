@@ -1,7 +1,11 @@
-import { receiveUsers, voteQuestion, userQuestion } from "./users";
-import { receiveQuestions, handleVoteQuestion, saveQuestion } from "./questions";
+import { voteQuestion, userQuestion } from "./users";
+import {
+  receiveQuestions,
+  handleVoteQuestion,
+  saveQuestion
+} from "./questions";
 import { setAuthedUser } from "./authedUser";
-import { _getQuestions,_saveQuestion } from "../utils/_DATA";
+import { _getQuestions, _saveQuestion } from "../utils/_DATA";
 import { showLoading, hideLoading } from "react-redux-loading";
 
 export function handleInitialData(id) {
@@ -15,7 +19,6 @@ export function handleInitialData(id) {
   };
 }
 
-
 export function handleVote(question) {
   return dispatch => {
     dispatch(showLoading());
@@ -24,19 +27,17 @@ export function handleVote(question) {
     dispatch(hideLoading());
   };
 }
-export function handleNewQuestion({authedUser,optionOne,optionTwo}) {
+export function handleNewQuestion({ authedUser, optionOne, optionTwo }) {
   return dispatch => {
     dispatch(showLoading());
     return _saveQuestion({
-      optionOneText:optionOne,
-      optionTwoText:optionTwo,
-      author:authedUser
+      optionOneText: optionOne,
+      optionTwoText: optionTwo,
+      author: authedUser
     }).then(question => {
-      console.log("aqui", question)
-      dispatch(saveQuestion(question))
-      dispatch(userQuestion(question))
+      dispatch(saveQuestion(question));
+      dispatch(userQuestion(question));
       dispatch(hideLoading());
-
-    })
+    });
   };
 }

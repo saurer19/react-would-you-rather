@@ -3,7 +3,7 @@ let users = {
     id: 'sarahedo',
     password:'1234',
     name: 'Sarah Edo',
-    avatarURL: 'https://image.flaticon.com/icons/svg/17/17004.svg',
+    avatarURL: 'https://robohash.org/sarahedo.png',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -16,7 +16,7 @@ let users = {
     id: 'tylermcginnis',
     password:'1234',
     name: 'Tyler McGinnis',
-    avatarURL:'https://image.flaticon.com/icons/svg/17/17004.svg',
+    avatarURL:'https://robohash.org/tylermcginnis.png',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -27,7 +27,7 @@ let users = {
     id: 'johndoe',
     password:'1234',
     name: 'John Doe',
-    avatarURL:'https://image.flaticon.com/icons/svg/17/17004.svg' ,
+    avatarURL:'https://robohash.org/johndoe.png' ,
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',

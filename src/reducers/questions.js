@@ -12,7 +12,6 @@ export default function questions(state = {}, action) {
         ...action.questions
       };
     case SAVE_QUESTION:
-    console.log("action question", action)
       return {
         ...state,
         [action.question.id]: action.question
