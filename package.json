@@ -1,5 +1,6 @@
 {
   "name": "would-you-rather-react",
+  "homepage": "http://saurer19.github.io/would-you-rather-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,12 +13,18 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "semantic-ui-css": "^2.3.1",
-    "semantic-ui-react": "^0.79.1"
+    "semantic-ui-react": "^0.79.1",
+    "serve": "^10.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
